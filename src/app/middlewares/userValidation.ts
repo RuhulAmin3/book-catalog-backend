@@ -17,6 +17,7 @@ export const userValidation =
       }
       const verifiedToken = verifyToken(token, config.jwt.jwt_secret as Secret);
       req.user = verifiedToken;
+      next();
     } catch (err) {
       next(err);
     }
