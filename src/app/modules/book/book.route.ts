@@ -12,8 +12,13 @@ router.post(
   bookController.createBook
 );
 router.get("/:id", bookController.getBook);
-// router.patch("/:id", bookController.updateBook);
-// router.delete("/:id", bookController.deleteBook);
-// router.get("/", bookController.getAllBook);
+router.patch(
+  "/:id",
+  validationRequest(bookValidation.updateBookZodSchema),
+  userValidation(),
+  bookController.updateBook
+);
+router.delete("/:id", userValidation(), bookController.deleteBook);
+router.get("/", bookController.getAllBook);
 
 export default router;

@@ -25,6 +25,20 @@ export const createBookZodSchema = z.object({
     }),
   }),
 });
+
+export const updateBookZodSchema = z.object({
+  body: z.object({
+    title: z.string().optional(),
+    author: z.string().optional(),
+    Genre: z.string().optional(),
+    description: z.string().optional(),
+    price: z.number().optional(),
+    cover: z.string().optional(),
+    publicationDate: z.string().optional(),
+  }),
+});
+
 export const bookValidation = {
   createBookZodSchema,
+  updateBookZodSchema,
 };

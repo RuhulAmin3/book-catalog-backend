@@ -13,3 +13,15 @@ export interface IBook {
 }
 
 export type BookModel = Model<IBook, object>;
+
+export interface IBookFilters {
+  page?: number;
+  limit?: number;
+  sortBy?: string;
+  genre?: string;
+  sortOrder?: "asc" | "desc";
+  minPrice?: number;
+  maxPrice?: number;
+  publicationYear?: number;
+  searchTerm?: string;
+}
