@@ -1,6 +1,6 @@
 import httpStatus from "http-status";
 import ApiError from "../../../error/ApiError";
-import { IBook, IBookFilters } from "./book.interface";
+import { IBook } from "./book.interface";
 import { Book } from "./book.model";
 import { JwtPayload } from "jsonwebtoken";
 
