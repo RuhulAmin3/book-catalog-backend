@@ -12,6 +12,7 @@ app.use(cors());
 app.use(cookieParser());
 
 app.use("/api/v1", globalRoutes);
+
 app.use(globalErrorHandler);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
