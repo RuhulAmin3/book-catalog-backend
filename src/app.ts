@@ -15,6 +15,10 @@ app.use("/api/v1", globalRoutes);
 
 app.use(globalErrorHandler);
 
+app.get("/", (req: Request, res: Response) => {
+  res.json("in the name of Allah");
+});
+
 app.use((req: Request, res: Response, next: NextFunction) => {
   res.status(httpStatus.NOT_FOUND).json({
     success: false,
