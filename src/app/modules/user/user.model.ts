@@ -5,17 +5,12 @@ import httpStatus from "http-status";
 
 const userSchema = new Schema<IUser, UserModel, IUserMethods>(
   {
-    name: {
-      type: {
-        firstName: {
-          type: String,
-          required: true,
-        },
-        lastName: {
-          type: String,
-          required: true,
-        },
-      },
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
       required: true,
     },
     email: {

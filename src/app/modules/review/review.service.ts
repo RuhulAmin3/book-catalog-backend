@@ -11,7 +11,9 @@ const postReview = async (data: IReview): Promise<IReview> => {
 };
 
 const getReviews = async (id: string): Promise<IReview[]> => {
-  const reviews = await Review.find({ book: id });
+  const reviews = await Review.find({ book: id })
+    .populate("user")
+    .populate("book");
   return reviews;
 };
 

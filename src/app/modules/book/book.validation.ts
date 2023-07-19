@@ -8,7 +8,7 @@ export const createBookZodSchema = z.object({
     author: z.string({
       required_error: "author name is required",
     }),
-    Genre: z.string({
+    genre: z.string({
       required_error: "genre is required",
     }),
     description: z.string({
@@ -30,7 +30,7 @@ export const updateBookZodSchema = z.object({
   body: z.object({
     title: z.string().optional(),
     author: z.string().optional(),
-    Genre: z.string().optional(),
+    genre: z.string().optional(),
     description: z.string().optional(),
     price: z.number().optional(),
     cover: z.string().optional(),

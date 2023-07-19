@@ -1,12 +1,8 @@
 import { Model } from "mongoose";
 
-interface IUserName {
+export interface IUser {
   firstName: string;
   lastName: string;
-}
-
-export interface IUser {
-  name: IUserName;
   password: string;
   email: string;
 }

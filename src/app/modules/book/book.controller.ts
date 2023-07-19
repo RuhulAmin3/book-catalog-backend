@@ -39,7 +39,6 @@ const getAllBook = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
-
 const updateBook = catchAsync(async (req: Request, res: Response) => {
   const data = req.body;
   const user = req.user as JwtPayload;

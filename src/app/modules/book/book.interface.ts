@@ -4,7 +4,7 @@ import { IUser } from "../user/user.interface";
 export interface IBook {
   title: string;
   author: string;
-  Genre: string;
+  genre: string;
   price: number;
   cover: string;
   description: string;

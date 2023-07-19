@@ -39,7 +39,6 @@ const loginUser = async (
     isUserExist?.password,
     password
   );
-
   if (!passwordMatched) {
     throw new ApiError(httpStatus.UNAUTHORIZED, "wrong credentials");
   }

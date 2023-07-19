@@ -24,7 +24,6 @@ const getAllBook = async (): Promise<IBook[] | []> => {
   const result = await Book.find({});
   return result;
 };
-
 const updateBook = async (
   id: string,
   data: IBook,
@@ -41,6 +40,7 @@ const updateBook = async (
       "you cannot update this book. you can only update your book"
     );
   }
+
   const updatedBook = await Book.findByIdAndUpdate(id, data, { new: true });
   return updatedBook;
 };
@@ -57,6 +57,7 @@ const deleteBook = async (id: string, user: JwtPayload): Promise<void> => {
       "you cannot delete this book. you can only delete your book"
     );
   }
+  await Book.findByIdAndDelete(id);
 };
 
 export const bookService = {
